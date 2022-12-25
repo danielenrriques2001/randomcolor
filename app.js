@@ -1,17 +1,13 @@
 
 //we create the button's reference.
 // and add a Event 'Click'. 
-$(".button").on('click', () => {
-    //create a const, it contains a Css RGB squeleton. 
-    //!RGB takes three values!
-    //We call the function. The values will be inserted randomly from the function. 
-    // always between 255 and 0;
-    const rndColor = `rgb(${random(255)}, ${random(5)}, ${random(255)})`;
-                        //rgb(255,123,100)
+$(document).ready(() => {
 
-    //We select the body's BackgroundColor property. 
-    //It'll be equal to the rndColor variable. 
-    document.body.style.backgroundColor = rndColor;
+    setInterval(()=> {
+        const rndColor = `rgb(${random(255)}, ${random(5)}, ${random(255)})`; 
+        document.body.style.backgroundColor = rndColor;
+    },250);
+   
 });
 
 function random(number) {
